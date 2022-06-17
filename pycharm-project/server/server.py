@@ -16,8 +16,13 @@ def post():
     if request_data:
         if 'message' in request_data:
             message = request_data['message']
-    return "message is: "+message
+    db.publish('messages', message)
+    db.rpush('message_list', message)
 
+@app.route('/getall',methods = ['GET'])
+def getall():
+    message_list = db.lrange('message_list',0,db.llen('message_list'))
+    return "\n".join(message_list)
 
 if __name__ == '__main__':
     # Bind to PORT if defined, otherwise default to 5000.
