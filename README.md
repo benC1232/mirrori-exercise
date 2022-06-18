@@ -33,4 +33,4 @@ curl 127.0.0.1:5000/getall
  ```
 
 # info
-i started this project with basic knowledge in python and knowledge in networking, as for redis, flask and docker i googled a lot and now i know how to use flask (still not so sure about the docker)
+i started this project with basic knowledge in python and knowledge in networking, as for redis, flask and docker i googled a lot and now i know how to use flask and redis (still not so sure about the docker)
