@@ -12,6 +12,7 @@
 
 ```sh
 git clone https://github.com/bruhmomentu/mirrori-exercise.git
+cd mirrori-exercise
 docker-compose up --build -d --scale pycharm-project=2
 ```
 
