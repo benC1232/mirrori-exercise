@@ -1,0 +1,23 @@
+version: '3.7'
+
+services:
+  # Build the app services
+  pycharm-project:
+    build: pycharm-project
+    
+  nginx:
+    container_name: nginx
+    build: nginx
+     # Bind the port 5000 of container to machine port 5000
+    ports:
+      - 5000:5000
+  redis:
+    image: "redis:alpine"
+
+    command: redis-server
+    ports:
+     - "6379:6379"
+   
+    # Make app as nginx dependecy service
+    depends_on:
+      - pycharm-project
