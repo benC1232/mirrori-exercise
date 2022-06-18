@@ -7,7 +7,7 @@ import redis
 # starting flask
 app = Flask(__name__)
 # connecting to the database
-pool = redis.ConnectionPool(host='localhost', port=6379, db=0)
+pool = redis.ConnectionPool(host='mirrori-exercise-redis-1', port=6379, db=0)
 db = redis.Redis(connection_pool=pool)
 
 
